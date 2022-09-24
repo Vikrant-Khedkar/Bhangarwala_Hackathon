@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body>
+  <div class="container">
+
+  </div>
+    <center style="margin-top:100px">
+    <p class="h1">भंgarwala</p>
+    <p class="h4">देख मत बैच डाल
+    </p>
+</center>
+
+
+
+    <center>
+      <div class="card shadow" style="width: 357px; border-radius: 20px; height:320px;margin-top: 50px; background-color:rgb(138, 243, 241)">
+
+        <form style="" action="/login/auth" method="POST">
+          {% csrf_token%}
+            <div class="mb-3" >
+              <label for="exampleInputName1" style="padding-top:15px;"class="form-label">Userame </label>
+              <input style="width: 350px;" type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your details with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input style="width: 350px;" type="password" name='password' class="form-control" id="password">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          
+    <form action="{% url 'register' %}" style="margin-top: 10px; padding-top:10px;">
+        <button  type="submit" class="btn btn-secondary">Register</button>
+    </form>
+  
+</center>
+</div>
+
+
+   
+</body>
+</html>
